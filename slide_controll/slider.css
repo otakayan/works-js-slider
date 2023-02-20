@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+html {
+	font-size: 100%;
+}
+body {
+	color: #24292e;
+	font-family: "Sawarabi Gothic";
+}
+a {
+	text-decoration: none;
+	color: #24292e;
+}
+p {
+	font-size: 1rem;
+}
+img {
+	max-width: 100%;
+}
+li {
+	list-style: none;
+	font-size: 1.2rem;
+}
+#header {
+	max-width: 960px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 4%;
+	height: 170px;
+}
+#header ul {
+		display: flex;
+		padding: 10px 0;
+		align-items: center;
+}
+#header ul li:not(:first-child) {
+	margin-left: 30px;
+}
+#header ul li {
+	font-size: 0.9rem;
+}
+#header ul li a {
+		color: #24292e;
+		transition: all 0.3s;
+}
+#header ul li a:hover {
+		opacity: 0.5;
+}
+footer {
+	background-color: #24292e;
+	color: #ffffff;
+	margin-top: 30px;
+	padding: 10px 10px 10px;
+	text-align: center;
+}
+
+#slide,#controll,#slide>li,#controll>li{
+	margin:0;
+	padding:0;
+}
+
+#slide,#controll{
+	list-style:none;
+	margin:0 auto;
+}
+
+#slide{
+	position:relative;
+	overflow:hidden;
+}
+
+#slide>li{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+#slide>li>img{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+}
+
+#slide>li:nth-child(n+2){
+	display:none;
+}
+
+#controll{
+	margin-top:10px;
+	display:flex;
+	justify-content:center;
+}
+
+#controll>li{
+	cursor:pointer;
+}
+
+#controll>li:nth-child(1){
+	opacity:0.5;
+}
+
+#back{
+	position:absolute;
+	width:0;
+	height:0;
+	/* 以下で三角形を作る */
+	border-top:25px solid transparent;
+	border-right:25px solid rgba(125, 199, 22,0.5);
+	border-bottom:25px solid transparent;
+	border-left:25px solid transparent;
+}
+
+#next{
+	position:absolute;
+	width:0;
+	height:0;
+	/* 以下で三角形を作る */
+	border-top:25px solid transparent;
+	border-right:25px solid transparent;
+	border-bottom:25px solid transparent;
+	border-left:25px solid rgba(125, 199, 22, 0.5);
+}
+.pagenation {
+	font-size: 10px;
+	color: navy;
+}
