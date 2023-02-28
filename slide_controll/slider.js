@@ -75,7 +75,10 @@ window.onload=function(){  //ここから始まる（画面ロードされたら
 	let clientRect=slide.getBoundingClientRect(); //windowの中のclientの座標取得
 	let slide_x=window.pageXOffset+clientRect.left; //スクロールした量＋windowからclientの座標までの距離（左）
 	let slide_y=window.pageYOffset+clientRect.top; //スクロールした量＋windowからclientの座標までの距離（上）
-/*
+	console.log(slide_x);
+	console.log(slide_y);
+
+	/*
 	getBoundingClientRect()・・・要素の座標取得
 	上記の.left・.top・・・画面端からの指定方向距離
 	window.pageXOffset・window.pageYOffset・・・windowのスクロール量
@@ -84,10 +87,10 @@ window.onload=function(){  //ここから始まる（画面ロードされたら
 //画像のサイズを把握してから、戻る進むボタンの設置
 	const next=document.getElementById("next"); //進むボタン情報
 	const back=document.getElementById("back"); //戻るボタン情報
-	next.style.left=(slide_x+max_width)+"px"; //(css)
-	back.style.left=(slide_x)+"px"; //(css)
-	next.style.top=((slide_y+max_height)/2-25)+"px"; //(css)
-	back.style.top=((slide_y+max_height)/2-25)+"px"; //(css)
+	next.style.left=(slide_x+max_width+20)+"px"; //(css)
+	back.style.left=(slide_x-70)+"px"; //(css)
+	next.style.top=((slide_y+max_height)/2+50)+"px"; //(css)
+	back.style.top=((slide_y+max_height)/2+50)+"px"; //(css)
 	keika_time=(Math.floor(max_width/idou__kyori))*(idou_time+5);//5は処理時間5ms目安
 	timeID=setTimeout(disp,stop_time); //stop_time経過後にdisp関数を実行
 

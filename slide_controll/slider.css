@@ -31,9 +31,9 @@ li {
 	height: 170px;
 }
 #header ul {
-		display: flex;
-		padding: 10px 0;
-		align-items: center;
+	display: flex;
+	padding: 10px 0;
+	align-items: center;
 }
 #header ul li:not(:first-child) {
 	margin-left: 30px;
@@ -42,11 +42,11 @@ li {
 	font-size: 0.9rem;
 }
 #header ul li a {
-		color: #24292e;
-		transition: all 0.3s;
+	color: #24292e;
+	transition: all 0.3s;
 }
 #header ul li a:hover {
-		opacity: 0.5;
+	opacity: 0.5;
 }
 footer {
 	background-color: #24292e;
@@ -112,7 +112,7 @@ footer {
 	height:0;
 	/* 以下で三角形を作る */
 	border-top:25px solid transparent;
-	border-right:25px solid rgba(125, 199, 22,0.5);
+	border-right:25px solid rgba(0, 0, 128, 0.5);
 	border-bottom:25px solid transparent;
 	border-left:25px solid transparent;
 }
@@ -125,9 +125,40 @@ footer {
 	border-top:25px solid transparent;
 	border-right:25px solid transparent;
 	border-bottom:25px solid transparent;
-	border-left:25px solid rgba(125, 199, 22, 0.5);
+	border-left:25px solid rgba(0, 0, 128, 0.5);
 }
 .pagenation {
 	font-size: 10px;
-	color: navy;
+	color: rgb(0, 0, 128);
+	margin-left: 2px;
+}
+.desc {
+	max-width: 960px;
+	display: flex;
+	margin: 0 auto;
+}
+.desc .desc_left {
+	width: 49%;
+}
+.desc .desc_right {
+	width: 49%;
+	margin-left: 2%;
+	text-align: left;
+}
+
+.desc_box {
+	text-align: left;
+}
+.desc_title {
+	font-weight: 700;
+	font-size: 1rem;
+}
+.desc_box a {
+	text-decoration: underline;
+}
+.desc_box a:hover {
+	color: red;
+}
+.desc_detail {
+	font-size: 0.9rem;
 }
